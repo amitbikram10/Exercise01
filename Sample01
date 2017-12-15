@@ -1,0 +1,259 @@
+
+
+ using System;
+
+namespace firstapp
+{
+    class Program
+    {
+        /*
+        class credentials
+        {
+            String username;
+            String password;
+            credentials(String u, String p)
+            {
+                this.username = u;
+                this.password = p;
+            }
+        }
+        */
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+           // int result = TotalUpto(5);
+            Program obje = new Program();
+            int output = obje.TotalUpto(5);
+            Console.WriteLine("Output = " + output);
+            Console.ReadKey();
+
+            Program obje1 = new Program();
+            int output1 = obje1.TotalEvenUpto(10);
+            Console.WriteLine("Output = " + output1);
+            Console.ReadKey();
+        }
+       
+  
+
+         int TotalUpto(int input)
+        {
+           
+            return 0;
+        }
+        int TotalEvenUpto(int input)
+        {
+            return 0;
+        }
+
+        bool Authenticate (String username, String password)
+        {
+            String[] validusername = { "abc", "def", "ghi" };
+            String[] validpassword = { "123", "456", "789" };
+
+            return true;
+        }
+
+    }
+}
+
+
+
+*********************************************************************
+
+
+   using System;
+
+namespace firstapp
+{
+    class Program
+    {
+        /*
+        class credentials
+        {
+            String username;
+            String password;
+            credentials(String u, String p)
+            {
+                this.username = u;
+                this.password = p;
+            }
+        }
+        */
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            // int result = TotalUpto(5);
+            Program obje = new Program();
+           // int output = obje.TotalUpto(5);
+            int output = 0;
+            for (int i = 1; i<6; i++)
+            {
+                output = output + i;
+            }
+            Console.WriteLine("Output = " + output++);
+            Console.ReadKey();
+
+            Program obje1 = new Program();
+            int output1 = obje1.TotalEvenUpto(10);
+            for (output1= 0; output1<12; output1++)
+            Console.WriteLine("Output = " + output1++);
+            Console.ReadKey();
+        }
+
+
+
+        int TotalUpto(int input)
+        {
+
+            return 0;
+        }
+        int TotalEvenUpto(int input)
+        {
+            return 0;
+        }
+
+        bool Authenticate(String username, String password)
+        {
+            String[] validusername = { "abc", "def", "ghi" };
+            String[] validpassword = { "123", "456", "789" };
+
+            return true;
+        }
+
+    }
+}
+**************************************************************12/13/2017**************************************************
+
+using System;
+
+namespace firstapp
+{
+    class Program
+    {
+        /*
+        class credentials
+        {
+            String username;
+            String password;
+            credentials(String u, String p)
+            {
+                this.username = u;
+                this.password = p;
+            }
+        }
+        */
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            // int result = TotalUpto(5);
+           Program obje = new Program();
+            int output = obje.TotalUpto(10);
+            bool flag = obje.Authenticate("abc", "123"); 
+
+            Program obje1 = new Program();
+            int output1 = obje1.TotalEvenUpto(10);
+            Console.WriteLine("Auth =" + flag);
+            Console.ReadKey();
+        }
+
+
+
+        int TotalUpto(int input)
+        {
+            int output = 0;
+            for (int i = 1; i < input+1; i++)
+            {
+                output = output + i;
+            }
+            Console.WriteLine("Output = " + output++);
+            Console.ReadKey();
+            return 0;
+        }
+
+        int TotalEvenUpto(int input1)
+        {
+           
+            int total = 0;
+            for (int i = 0; i <= input1; i += 2)
+            {
+                
+                total = total + i;
+            }
+            Console.WriteLine("Output = " + total);
+          
+            Console.ReadKey();
+            return 0;
+        }
+
+        bool Authenticate(String username, String password)
+                                  
+        {
+            String[] validusername = new string[] { "abc", "def", "ghi" };
+            String[] validpassword = new string[] { "123", "456", "789" };
+            int i = 0;
+            while (username.Equals(validusername[i])== false)
+            {
+                Console.WriteLine("Username =" + validusername[i]);
+
+                i++;
+            }
+            
+             if (username.Equals(validusername[i]) && password == validpassword[i])
+            {
+                return true;
+            }
+             else
+            {
+                return false;
+            }
+
+             //    Write a function to reverse string eg: input :hello , ouput : olleh
+  // Write a programme to find repeated string in given character : (hash map used)
+  //Write a programme to find higest no. in array
+  // Write a programme to find duplicate element in an array. take 2nd array as input from users and 1st is static.
+            
+
+           
+        }
+
+    }
+}
+
+***********************************************************************************12/14/2017*******************************************************
+
+//    Write a function to reverse string eg: input :hello , ouput : olleh
+
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+
+            string Str, Revstr = "";  //for storing string value
+            int Length;               //for counting lenght of given string
+
+            Console.Write("Enter A String : "); //showing message to user
+            Str = Console.ReadLine();           //to allow user to input string
+
+            Length = Str.Length - 1;            //storing the length of given string
+
+            while (Length >= 0)                //loops the given string length
+            {
+
+                Revstr = Revstr + Str[Length];  //performimg a reverse string according to length of given string
+                Length--;
+
+            }
+
+            Console.WriteLine("Reverse  String  Is  {0}", Revstr); // displaying output to user
+            Console.ReadLine();                                                // to keep window
+
+
+        }
+    }
+}
